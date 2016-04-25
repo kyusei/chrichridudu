@@ -1,0 +1,6 @@
+#!/home/antony/Documents/python/gestionKendo/virtualenv/workspace/bin/python3.4
+
+import cherrypy.daemon
+
+if __name__ == '__main__':
+    cherrypy.daemon.run()

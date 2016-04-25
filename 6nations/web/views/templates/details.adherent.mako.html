@@ -1,0 +1,35 @@
+<%inherit file="base.mako.html" />
+<%block name="container">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Adherent
+                </div>
+                <div class="panel-body">
+                    <p>Nom : ${adherent.nom}</p>
+                    <p>Prenom : ${adherent.prenom}</p>
+                    <p>Date de naissance : ${adherent.dateNaissance}</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Grades
+                                </div>
+                                <div class="panel-body">
+                                    %for grade in grades:
+                                    <p>${grade.libelle}</p>
+                                    %endfor
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</div>
+</%block>

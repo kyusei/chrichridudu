@@ -1,0 +1,2 @@
+Le package service contient toutes les classes de type Service qui ont pour but de gérer une entité.
+Par exemple pour l'entité adherent on dois pouvoir gérer ses grades, c'est le serviceAdherent qui s'en charge.

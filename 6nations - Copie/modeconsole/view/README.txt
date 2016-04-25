@@ -1,0 +1,1 @@
+Le package view contient toutes les classes python qui servent a l'interaction avec l'utilisateur en mode console pour l'instant
