@@ -1,12 +1,12 @@
-from kendoDAO.DiplomesDAO import DiplomesDAO
-from kendoDAO.ProfesseursDAO import ProfesseursDAO
-from models import Professeur
+from DAO.ScoreDAO import ScoreDAO
+from DAO.EquipeDAO import EquipeDAO
+from models import Equipe
 
 """
 Cette classe a pour utilité la gestion d'un professeur
 Il s'occupe de la communication avec les dao
 """
-class ServiceProfesseur():
+class EquipeController():
     """
     constructeur
     """

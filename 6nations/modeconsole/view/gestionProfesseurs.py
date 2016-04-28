@@ -1,6 +1,6 @@
 from datetime import datetime
-from kendoDAO.ProfesseursDAO import ProfesseursDAO
-from service.ServiceProfesseur import ServiceProfesseur
+from DAO.ProfesseursDAO import ProfesseursDAO
+from service.EquipeController import ServiceProfesseur
 
 
 class GestionProfesseurs():

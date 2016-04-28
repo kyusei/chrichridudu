@@ -1,7 +1,7 @@
 import unittest
 
 from models import Professeur
-from service.ServiceProfesseur import ServiceProfesseur
+from service.EquipeController import ServiceProfesseur
 
 
 class TestServiceProfesseur(unittest.TestCase):

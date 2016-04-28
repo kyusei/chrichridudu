@@ -1,7 +1,7 @@
 import unittest
 
 from models import Adherent
-from service.ServiceAdherent import ServiceProfesseur
+from service.MatchController import ServiceProfesseur
 
 
 class TestServiceAdherent(unittest.TestCase):

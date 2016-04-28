@@ -62,7 +62,7 @@ class Score(Base):
     typePoint = Column(String, nullable=False)
     temps = Column(Float)
 
-    def __init__(self, typeMatch, temps):
+    def __init__(self, idMatch, idEquipe, typePoint, temps):
         self.typePoint = typePoint
         self.temps = temps
 

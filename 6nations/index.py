@@ -2,8 +2,8 @@ import inspect
 import os
 import cherrypy
 from mako.lookup import TemplateLookup
-from kendoDAO.AdherentsDAO import AdherentsDAO
-from service.ServiceAdherent import ServiceAdherent
+from DAO.EquipeDAO import AdherentsDAO
+from service.MatchController import ServiceAdherent
 
 try:
     _curdir = os.path.join(os.getcwd(), os.path.dirname(os.path.abspath(__file__)))

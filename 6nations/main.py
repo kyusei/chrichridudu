@@ -3,8 +3,8 @@ from datetime import datetime
 
 from modeconsole.view.gestionProfesseurs import GestionProfesseurs
 
-from kendoDAO.AdherentsDAO import AdherentsDAO
-from kendoDAO.ProfesseursDAO import ProfesseursDAO
+from DAO.EquipeDAO import AdherentsDAO
+from DAO.ProfesseursDAO import ProfesseursDAO
 from modeconsole.view.gestionAdherents import GestionAdherent
 
 

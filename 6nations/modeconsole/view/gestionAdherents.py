@@ -1,6 +1,6 @@
 from datetime import datetime
-from kendoDAO.AdherentsDAO import AdherentsDAO
-from service.ServiceAdherent import ServiceAdherent
+from DAO.EquipeDAO import AdherentsDAO
+from service.MatchController import ServiceAdherent
 
 class GestionAdherent():
 

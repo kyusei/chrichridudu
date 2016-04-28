@@ -1,6 +1,6 @@
 import unittest
 
-from kendoDAO.AdherentsDAO import AdherentsDAO
+from DAO.EquipeDAO import AdherentsDAO
 
 
 class TestAdherentsDAO(unittest.TestCase):
