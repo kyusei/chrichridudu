@@ -935,3 +935,8 @@ TypeError: render_body() takes 1 positional argument but 2 were given
 [20/Apr/2016:13:11:58] ENGINE Bus EXITING
 [20/Apr/2016:13:11:58] ENGINE Bus EXITED
 [20/Apr/2016:13:11:58] ENGINE Waiting for child threads to terminate...
+[05/May/2016:17:51:21] ENGINE Listening for SIGTERM.
+[05/May/2016:17:51:21] ENGINE Bus STARTING
+[05/May/2016:17:51:21] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/May/2016:17:51:22] ENGINE Serving on http://127.0.0.1:8080
+[05/May/2016:17:51:22] ENGINE Bus STARTED

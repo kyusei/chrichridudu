@@ -1,28 +1,21 @@
 from datetime import datetime
-from DAO.ProfesseursDAO import ProfesseursDAO
-from service.EquipeController import ServiceProfesseur
+from DAO.EquipeDAO import EquipeDAO
+from DAO.ScoreDAO import ScoreDAO
+from service.EquipeController import Equipe
 
 
-class GestionProfesseurs():
+class GestionEquipe():
     def __init__(self):
-        self.professeursDAO = ProfesseursDAO()
+        self.equipeDAO = EquipeDAO()
 
-    def afficherProfesseurs(self):
-        professeurs = self.professeursDAO.findAll()
+    def afficherEquipe(self):
+        TEquipe = self.equipeDAO.getAllEquipe()
         print("")
-        for professeur in professeurs:
-            print("{} : {} {}".format(professeur.licence, professeur.prenom, professeur.nom))
+        for equipe in TEquipe:
+            print("{} : {} {}".format(equipe.pays, equipe.classement, equipe.goalAverage, equipe.nbGagne, equipe.nbNul, equipe.nbPerdu))
         print("")
 
-    def afficherAjoutProfesseur(self):
-        print("")
-        nom = input("Nom : ")
-        prenom = input("Prenom : ")
-        dateNaissance = datetime.strptime(input("Date de naissance (JJ/MM/AAA) : "), "%d/%m/%Y")
-        print("")
-        self.professeursDAO.insert(nom, prenom, dateNaissance)
-
-    def afficherAjoutDiplome(self):
+    def afficherAjoutScore(self):
         professeur = self.selectionProfesseur()
         if (professeur is not None):
             serviceProfesseur = ServiceProfesseur(professeur)

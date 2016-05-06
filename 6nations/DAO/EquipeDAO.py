@@ -22,3 +22,6 @@ class EquipeDAO(DAO):
     def getEquipe(self, id):
 
         return self.session.query(Equipe).filter(Equipe.idEquipe== id).one_or_none()
+
+    def getEquipeByPays(self, ipays):
+        return self.session.query(Equipe.idEquipe).filter(Equipe.pays == ipays).one_or_none()

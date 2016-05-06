@@ -5,7 +5,7 @@ from modeconsole.view.gestionProfesseurs import GestionProfesseurs
 
 from DAO.EquipeDAO import AdherentsDAO
 from DAO.ProfesseursDAO import ProfesseursDAO
-from modeconsole.view.gestionAdherents import GestionAdherent
+from modeconsole.view.gestion import GestionAdherent
 
 
 class Menu:

@@ -2,7 +2,7 @@ import inspect
 import os
 import cherrypy
 from mako.lookup import TemplateLookup
-from DAO.EquipeDAO import AdherentsDAO
+from DAO.EquipeDAO import EquipeDAO
 from service.MatchController import ServiceAdherent
 
 try:

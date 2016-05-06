@@ -8,7 +8,7 @@ class ScoreDAO(DAO):
     def getAllScores(self):
         Tscore = []
         for score in self.session.query(Score):
-            diplomes.append(score)
+            Tscore.append(score)
         return Tscore
 
     def getByMatchAndTeam(self,id_equipe, id_match):

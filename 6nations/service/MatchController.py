@@ -15,9 +15,9 @@ class MatchController():
         self.match = match
         self.matchdao = MatchDAO()
         if self.match is None:
-            raise AttributeError("Le service Match à besoin d'un objet Match")
+            raise AttributeError("error no match object")
         elif type(match) is not Match:
-            raise AttributeError("Le service Match à besoin d'un objet Match")
+            raise AttributeError("error no match object")
 
 
     """
@@ -25,6 +25,6 @@ class MatchController():
     Args : libelleGrade - String
     """
     def addMatch(self,  lieu, date, id_equipe1, id_equipe2):
-        self.matchdao.addMatch(libelleGrade, self.adherent.licence)
+        self.matchdao.addMatch( lieu, date, id_equipe1, id_equipe2)
 
 
