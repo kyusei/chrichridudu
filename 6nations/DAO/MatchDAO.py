@@ -11,7 +11,7 @@ class MatchDAO(DAO):
         return Tmatch
 
     def getByIdEquipes(self, id_equipe1, id_equipe2):
-        return self.session.query(Match).filter(Match.idEquipe1 == id_equipe1, Match.idEquipe2 == id_equipe2).one_or_none()
+        return self.session.query(Match).filter('match.idEquipe1' == id_equipe1, 'match.idEquipe2' == id_equipe2).one_or_none()
 
 
     def addMatch(self, lieu, date, id_equipe1, id_equipe2):

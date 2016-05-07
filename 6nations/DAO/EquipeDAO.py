@@ -1,6 +1,6 @@
 # coding=utf-8
 from DAO.MainDAO import DAO
-from models import Equipe
+from models import *
 
 
 class EquipeDAO(DAO):
@@ -12,7 +12,7 @@ class EquipeDAO(DAO):
             Tequipe.append(equipe)
         return Tequipe
 
-    def addEquipe(self, pays, classement, goalAverage, nbGagne, nbPerdu, nbNul):
+    def addEquipe(self, pays, classement=0, goalAverage=0, nbGagne=0, nbPerdu=0, nbNul=0):
 
         equipe = Equipe(pays, classement, goalAverage, nbGagne, nbPerdu, nbNul)
         self.session.add(equipe)

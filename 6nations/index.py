@@ -3,7 +3,7 @@ import os
 import cherrypy
 from mako.lookup import TemplateLookup
 from DAO.EquipeDAO import EquipeDAO
-from service.MatchController import ServiceAdherent
+from service.MatchController import MatchController
 
 try:
     _curdir = os.path.join(os.getcwd(), os.path.dirname(os.path.abspath(__file__)))
