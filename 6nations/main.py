@@ -21,6 +21,7 @@ class Menu:
         print("3 : Ajouter un match")
         print("4 : Ajouter une equipe")
         print("5 : Ajouter un score pour une équipe et un match")
+        print("6 : Afficher le score d'un match pour une equipe choisie")
 
     def run(self):
         fini = False
@@ -38,7 +39,8 @@ class Menu:
                     self.gestionEquipe.addEquipe()
                 elif choix == 5:
                     self.gestionScore.afficherAjoutScore()
-
+                elif choix == 6:
+                    self.gestionScore.afficherScoreEquipeByMatch()
                 else:
                     fini = True
 

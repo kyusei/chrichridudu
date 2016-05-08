@@ -19,3 +19,16 @@ class ScoreDAO(DAO):
         score = Score(idMatch, idEquipe, typePoint, temps)
         self.session.add(score)
         self.session.commit()
+
+    def getNbPointsFromType (self, typePoint):
+        nbPoint = 0
+        if (typePoint == "essai" ):
+            nbPoint=5
+        elif (typePoint=="penalite"):
+            nbPoint=3
+        elif (typePoint == "drop"):
+            nbPoint=3
+        elif (typePoint == "transformation"):
+            nbPoint=2
+
+        return nbPoint;
