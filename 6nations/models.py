@@ -2,7 +2,7 @@ from sqlalchemy.ext.declarative import declarative_base
 import datetime
 from sqlalchemy import ForeignKey, Column,DateTime, Integer, String, Date, create_engine
 from sqlalchemy.orm import relationship
-from DAO.EquipeDAO import EquipeDAO
+
 
 Base = declarative_base()
 engine = create_engine('sqlite:///bd.db', echo=False)
@@ -18,7 +18,7 @@ class Match(Base):
 
 
     def __init__(self, idMatch, lieu, date, idEquipe1, idEquipe2):
-        self.equipeDAO = EquipeDAO()
+        
 
         self.idMatch = idMatch
         self.lieu = lieu
@@ -45,19 +45,23 @@ class Equipe(Base):
     nbNul = Column(Integer, nullable=True)
 
     def __init__(self, idEquipe, pays, classement, goalAverage, nbGagne, nbPerdu, nbNul):
-        self.idEquipe=idEquipe
-        self.pays=pays
-        self.classement=classement
-        self.goalAverage=goalAverage
-        self.nbGagne=nbGagne
-        self.nbPerdu=nbPerdu
-        self.nbNul=nbNul
+        self.idEquipe = idEquipe
+        self.pays = pays
+        self.classement = classement
+        self.goalAverage = goalAverage
+        self.nbGagne = nbGagne
+        self.nbPerdu = nbPerdu
+        self.nbNul = nbNul
 
     def __str__(self):
-        return ("Equipe : [ Pays: {}, Nombre de gagnés : {}, Nombre de perdus : {}, Nombre de nuls : {}, Goal Average :{}, Classement : {}]".format( self.equipeDAO.getEquipe(self.idEquipe1),
-                                                                                                                                                     self.equipeDAO.getEquipe(self.idEquipe2),
-                                                                                     self.date, self.lieu))
+        return (
+        "Equipe : [ Pays: {}, Nombre de gagnés : {}, Nombre de perdus : {}, Nombre de nuls : {}, Goal Average :{}, Classement : {}]".format(
+            self.pays, self.classement, self.nbGagne, self.nbPerdu, self.nbNul))
 
+    def __repr__(self):
+        return (
+            "Equipe : [ Pays: {}, Nombre de gagnés : {}, Nombre de perdus : {}, Nombre de nuls : {}, Goal Average :{}, Classement : {}]".format(
+                self.pays, self.classement, self.nbGagne, self.nbPerdu, self.nbNul))
 
 class Score(Base):
     __tablename__ = 'resultat'

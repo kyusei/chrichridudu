@@ -7,8 +7,8 @@ __M_locals_builtin = locals
 _magic_number = 10
 _modified_time = 1461150665.291091
 _enable_loop = True
-_template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/details.adherent.mako.html'
-_template_uri = 'details.adherent.mako.html'
+_template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/details.equipe.mako.html'
+_template_uri = 'details.equipe.mako.html'
 _source_encoding = 'ascii'
 _exports = ['container']
 
@@ -70,6 +70,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "line_map": {"64": 23, "65": 25, "27": 0, "36": 1, "71": 65, "46": 2, "54": 2, "55": 12, "56": 12, "57": 13, "58": 13, "59": 14, "60": 14, "61": 22, "62": 23, "63": 23}, "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/details.adherent.mako.html", "uri": "details.adherent.mako.html"}
+{"source_encoding": "ascii", "line_map": {"64": 23, "65": 25, "27": 0, "36": 1, "71": 65, "46": 2, "54": 2, "55": 12, "56": 12, "57": 13, "58": 13, "59": 14, "60": 14, "61": 22, "62": 23, "63": 23}, "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/details.equipe.mako.html", "uri": "details.equipe.mako.html"}
 __M_END_METADATA
 """

@@ -3,7 +3,7 @@ import os
 import cherrypy
 from mako.lookup import TemplateLookup
 from DAO.EquipeDAO import EquipeDAO
-from service.MatchController import MatchController
+from service.EquipeController import EquipeController
 
 try:
     _curdir = os.path.join(os.getcwd(), os.path.dirname(os.path.abspath(__file__)))
@@ -24,19 +24,19 @@ mylookup = TemplateLookup(directories=[myTemplatesDir], module_directory=myModul
 #------------------------------------------------------------
 # Templates HTML
 #------------------------------------------------------------
-_pageListAdherent = mylookup.get_template("adherents.mako.html")
-_pageDetailsAdherent = mylookup.get_template("details.adherent.mako.html")
+_pageListEquipe = mylookup.get_template("equipe.mako.html")
+_pageDetailsEquipe = mylookup.get_template("details.equipe.mako.html")
 
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
-        gestionadherent = AdherentsDAO()
-        return _pageListAdherent.render(adherents=gestionadherent.findAll())
+        gestionEquipe = EquipeDAO()
+        return _pageListEquipe.render(equipe=gestionEquipe.getAllEquipe())
     @cherrypy.expose
-    def details(self, licence):
-        gestionadherent = AdherentsDAO()
-        serviceAdherent = ServiceAdherent(gestionadherent.findById(licence))
-        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent, grades=serviceAdherent.adherent.grades)
+    def details(self, id):
+        gestionEquipe = EquipeDAO()
+        EquipeController= EquipeController(gestionEquipe.getEquipe(id))
+        return _pageDetailsEquipe.render(equipe=EquipeController.adherent)
 
 if __name__ == '__main__':
 

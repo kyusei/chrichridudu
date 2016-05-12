@@ -935,3 +935,70 @@ TypeError: render_body() takes 1 positional argument but 2 were given
 [20/Apr/2016:13:11:58] ENGINE Bus EXITING
 [20/Apr/2016:13:11:58] ENGINE Bus EXITED
 [20/Apr/2016:13:11:58] ENGINE Waiting for child threads to terminate...
+[11/May/2016:21:52:45] ENGINE Listening for SIGTERM.
+[11/May/2016:21:52:45] ENGINE Bus STARTING
+[11/May/2016:21:52:45] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:21:52:45] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:21:52:45] ENGINE Bus STARTED
+[11/May/2016:21:54:25] HTTP 
+Traceback (most recent call last):
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\lib\encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\index.py", line 34, in index
+    return _pageListEquipe.render(equipe=gestionEquipe.findAll())
+AttributeError: 'EquipeDAO' object has no attribute 'findAll'
+[11/May/2016:22:19:16] ENGINE Listening for SIGTERM.
+[11/May/2016:22:19:16] ENGINE Bus STARTING
+[11/May/2016:22:19:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:22:19:16] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:22:19:16] ENGINE Bus STARTED
+[11/May/2016:22:19:22] HTTP 
+Traceback (most recent call last):
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\lib\encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\index.py", line 34, in index
+    return _pageListEquipe.render(equipe=gestionEquipe.getAllEquipe())
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\web\views\templates\mako_modules\base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\web\views\templates\mako_modules\equipe.mako.html.py", line 53, in render_container
+    for adherent in adherents:
+TypeError: 'Undefined' object is not iterable
+[11/May/2016:22:19:47] HTTP 
+Traceback (most recent call last):
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\lib\encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\cherrypy\_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\index.py", line 34, in index
+    return _pageListEquipe.render(equipe=gestionEquipe.getAllEquipe())
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Users\Robin\AppData\Local\Programs\Python\Python35-32\lib\site-packages\mako\runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\web\views\templates\mako_modules\base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "C:\Users\Robin\Desktop\dudu\6nations\web\views\templates\mako_modules\equipe.mako.html.py", line 53, in render_container
+    for adherent in adherents:
+TypeError: 'Undefined' object is not iterable

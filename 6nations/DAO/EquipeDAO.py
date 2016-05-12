@@ -1,6 +1,6 @@
 # coding=utf-8
 from DAO.MainDAO import DAO
-from models import *
+from models import Equipe
 
 
 class EquipeDAO(DAO):
